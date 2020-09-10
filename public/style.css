@@ -1,14 +1,37 @@
 html{
-  background-color:lightskyblue
+  background-color:lightskyblue;
+  text-align:center;
+  font-family:sans-serif;
+}
+
+#choose{
+  font-size:2rem;
 }
 
 .top{
   text-align:center;
   color:#fff;
-  font-family:sans-serif;
   border:10px solid midnightblue;
   background-color:darkcyan;
   border-radius:25px;
   padding:15px;
-  margin: 0% 25% 0% 25%;
+  margin: 0% 25% 2.5% 25%;
+}
+
+#addItem{
+  border-top:2.5px solid #000;
+  margin: 2.5% 25% 0% 25%
+}
+
+#toDoList{
+  margin:0 auto;
+  padding-top:2.5%
+}
+
+.menuSpacer{
+  margin-top:2%;
+}
+
+.hide{
+  display:none;
 }
