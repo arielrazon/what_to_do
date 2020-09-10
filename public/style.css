@@ -1,0 +1,10 @@
+html{
+  background-color:#fcfcfc
+}
+
+#top{
+  text-align:center;
+  border:2px solid teal;
+  padding:15px;
+  margin: 0 auto;
+}
