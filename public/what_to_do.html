@@ -10,8 +10,9 @@
   <h1>What should I be doing now?</h1>
   </div>
   <div id="yourChoice"></div>
-  <div id="options">Any preferences?
-    <label for="priorities">Choose a priority level:</label>
+  <div id="options"><h3>Any preferences?</h3>
+    <label for="priorities">Choose a priority level (select as many as you want to choose between):</label>
+    <br/>
     <select id="priorities" name="priorities" multiple>
       <option value="selfLow">Gift for myself. Won't hurt if postponed</option>
       <option value="officeLow">Low-priority office / housekeeping task</option>
@@ -20,9 +21,11 @@
       <option value ="redAlert">Time-sensitive, due immediately</option>
     </select>
   </div>
-  <button id="choose">
-    Click here to find out!
-  </button>
+
+    <button id="choose">
+      Click here to select an item !
+    </button>
+
   <div id="addItem">
     <label for="newItem">Add an Item:</label>
     <input type="text" id="newItem" name="newItem"/> 
@@ -37,6 +40,9 @@
     <input type="checkbox" id="workDay" name="workDay"/><label for="workDay">Task can only be done during business hours</label>
     <button id="addItemBtn">Submit</button>
   </div>
+
+
+
   <table id="toDoList">
     <tr>
       <th>Name</th>
