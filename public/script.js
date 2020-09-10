@@ -46,10 +46,10 @@ host on a database all the information
   // "Edabit",
   // "jerk off",
   // "write porn",
-  "correction email",
-  // "clean fridge",
-  "make packages",
-  "file mail and documents away"
+  {name:"file mail and documents away",
+  workDayOnly:false,
+  priority:0,
+  className:"filemailanddocumentsaway"}
   ];
 
   
@@ -60,4 +60,19 @@ document.querySelector("#choose").addEventListener("click",function(e){
     document.querySelector("#yourChoice").innerHTML = `<h5>Looks like you're gonna do:</h5> <h3>${currentThing}</h3>`
     })
 
-document.querySelector("#")
+document.querySelector("#addItemBtn").addEventListener("click",function(){
+  var newItem={
+    name:document.querySelector("#newItem").value,
+    priority:document.querySelector("#newItemPriority").selectedIndex,
+    workDayOnly:document.querySelector("#workDay").checked,
+    className: document.querySelector("#newItem").value.trim()
+  }
+  thingsToDo.push(newItem)
+  window.localStorage.setItem("toDoList",JSON.stringify(thingsToDo))
+})
+
+function displayTable(){
+  for(i=0;i<thingsToDo.length;i++){
+  document.querySelector("#toDoList").innerHTML+= `<tr id="${thingsToDo[i].className}"><td>${thingsToDo[i].name}</td><td>${thingsToDo[i].priority}</td><td><span class="completed">X</span></td></tr>`
+  }
+}
