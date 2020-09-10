@@ -57,7 +57,7 @@ displayTable();
 document.querySelector("#choose").addEventListener("click",function(e){
     e.preventDefault();
     var currentThing = thingsToDo[Math.floor(Math.random() * thingsToDo.length)]
-    document.querySelector("#yourChoice").innerHTML = `<h5>Looks like you're gonna do:</h5> <h3>${currentThing}</h3>`
+    document.querySelector("#yourChoice").innerHTML = `<h2>Looks like you're gonna:</h2> <h3 id="looksLike">${currentThing.name}</h3>`
     })
 
 document.querySelector("#addItemBtn").addEventListener("click",function(){
@@ -77,3 +77,8 @@ function displayTable(){
   `<tr id="${thingsToDo[i].className}"><td>${thingsToDo[i].name}</td><td>${thingsToDo[i].priority}</td><td><span class="completed">X</span></td></tr>`;
   }
 }
+
+document.querySelector("#option_toggle").addEventListener("click",function(e){
+  document.querySelector("#options").classList.contains("hide") ? 
+    document.querySelector("#options").classList.remove("hide") : document.querySelector("#options").classList.add("hide");
+})
