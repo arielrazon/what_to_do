@@ -1,10 +1,14 @@
 html{
-  background-color:#fcfcfc
+  background-color:lightskyblue
 }
 
-#top{
+.top{
   text-align:center;
-  border:2px solid teal;
+  color:#fff;
+  font-family:sans-serif;
+  border:10px solid midnightblue;
+  background-color:darkcyan;
+  border-radius:25px;
   padding:15px;
-  margin: 0 auto;
+  margin: 0% 25% 0% 25%;
 }
