@@ -10,8 +10,12 @@
   <div class="top">
   <h1>What should I be doing right now?</h1>
   </div>
+  <button id="choose">
+    Click here to find out what to do !
+  </button>
   <div id="yourChoice"></div>
-  <div id="options"><h3>Any preferences?</h3>
+  <div id="option_toggle"><h3>Any preferences?<br/>click here to toggle options</h3></div>
+  <div id="options" class="hide">
     <label for="priorities">Choose a priority level (select as many as you want to choose between):</label>
     <br/>
     <select id="priorities" name="priorities" multiple>
@@ -23,14 +27,15 @@
     </select>
   </div>
 
-    <button id="choose">
-      Click here to select an item !
-    </button>
+    
 
   <div id="addItem">
-    <label for="newItem">Add an Item:</label>
+    <h3>Add an Item:</h3>
+    <label for="newItem">Item Title:</label><br/>
     <input type="text" id="newItem" name="newItem"/> 
-    <label for="newItemPriority">Priority Level:</label>
+    <br/>
+    <br/>
+    <label for="newItemPriority" class="menuSpacer" >Priority Level:</label><br>
     <select id="newItemPriority" name="newItemPriority">
           <option value="selfLow">Gift for myself. Can safely postpone.</option>
           <option value="officeLow">Low-priority office / housekeeping task</option>
@@ -38,8 +43,10 @@
           <option value="timeSensitive">Time-sensitive (mid-level priority). Due soon.</option>
           <option value="redAlert">Time-sensitive, due immediately</option>
     </select>
-    <input type="checkbox" id="workDay" name="workDay"/><label for="workDay">Task can only be done during business hours</label>
-    <button id="addItemBtn">Submit</button>
+    <br/>
+    <input class="menuSpacer" type="checkbox" id="workDay" name="workDay"/><label for="workDay">Task can only be done during business hours</label>
+    <br/>
+    <button class="menuSpacer"  id="addItemBtn">Submit</button>
   </div>
 
 
