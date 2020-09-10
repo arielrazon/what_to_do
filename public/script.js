@@ -17,7 +17,7 @@ host on a database all the information
     //add css animations
     //add manual add item
     //visualize entire array, add and delete
-  var thingsToDo = [
+  var thingsToDo = JSON.parse(window.localStorage.getItem("toDoList")) || [
   /*"Scrimba Flexbox",
   "Scrimba Grid",
   "Grid Garden",*/
@@ -50,12 +50,14 @@ host on a database all the information
   // "clean fridge",
   "make packages",
   "file mail and documents away"
-  ]
+  ];
 
   
 
-    document.querySelector("#choose").addEventListener("click",function(e){
+document.querySelector("#choose").addEventListener("click",function(e){
     e.preventDefault();
-         var currentThing = thingsToDo[Math.floor(Math.random() * thingsToDo.length)]
-      document.querySelector("#yourChoice").innerHTML = `<h5>Looks like you're gonna do:</h5> <h3>${currentThing}</h3>`
+    var currentThing = thingsToDo[Math.floor(Math.random() * thingsToDo.length)]
+    document.querySelector("#yourChoice").innerHTML = `<h5>Looks like you're gonna do:</h5> <h3>${currentThing}</h3>`
     })
+
+document.querySelector("#")

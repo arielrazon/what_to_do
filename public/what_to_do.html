@@ -12,7 +12,7 @@
   <div id="yourChoice"></div>
   <div id="options">Any preferences?
     <label for="priorities">Choose a priority level:</label>
-    <select id="priorities" name="priorities">
+    <select id="priorities" name="priorities" multiple>
       <option value="selfLow">Gift for myself. Won't hurt if postponed</option>
       <option value="officeLow">Low-priority office / housekeeping task</option>
       <option value="procrastiBad">Time-sensitive (negative consequences if not completed). Not immediate</option>
@@ -23,11 +23,24 @@
   <button id="choose">
     Click here to find out!
   </button>
+  <div id="addItem">
+    <label for="newItem">Add an Item:</label>
+    <input type="text" id="newItem" name="newItem"/> 
+    <label for="newItemPriority">Priority Level:</label>
+    <select id="newItemPriority" name="newItemPriority">
+          <option value="selfLow">Gift for myself. Can safely postpone.</option>
+          <option value="officeLow">Low-priority office / housekeeping task</option>
+          <option value="procrastiBad">Time-sensitive (negative consequences if not completed). Not immediate</option>
+          <option value="timeSensitive">Time-sensitive (mid-level priority). Due soon.</option>
+          <option value="redAlert">Time-sensitive, due immediately</option>
+    </select>
+    <button id="addItemBtn">Submit</button>
+  </div>
   <table id="toDoList">
     <tr>
       <th>Name</th>
       <th>Priority</th>
-      <th>Done?</th>
+      <th>I'm done!</th>
     </tr>
   </table>
   
