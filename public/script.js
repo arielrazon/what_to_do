@@ -52,7 +52,7 @@ host on a database all the information
   className:"filemailanddocumentsaway"}
   ];
 
-  
+displayTable();
 
 document.querySelector("#choose").addEventListener("click",function(e){
     e.preventDefault();
@@ -73,6 +73,7 @@ document.querySelector("#addItemBtn").addEventListener("click",function(){
 
 function displayTable(){
   for(i=0;i<thingsToDo.length;i++){
-  document.querySelector("#toDoList").innerHTML+= `<tr id="${thingsToDo[i].className}"><td>${thingsToDo[i].name}</td><td>${thingsToDo[i].priority}</td><td><span class="completed">X</span></td></tr>`
+  document.querySelector("#toDoList").innerHTML+= 
+  `<tr id="${thingsToDo[i].className}"><td>${thingsToDo[i].name}</td><td>${thingsToDo[i].priority}</td><td><span class="completed">X</span></td></tr>`;
   }
 }
